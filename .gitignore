@@ -1,6 +1,10 @@
 node_modules/
 
-*.sqlite
+# Including database for easier testing purposes
+# *.sqlite
+
+# Including config for easier testing purposes
+# config.js
 
 .DS_Store
 .idea
