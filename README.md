@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/slistrom/me-express-back.svg?branch=master)](https://travis-ci.org/slistrom/me-express-back)
+
 ## Available Scripts
 
 In the project directory, you can run:
