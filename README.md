@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/slistrom/me-express-back.svg?branch=master)](https://travis-ci.org/slistrom/me-express-back)
+[![Travis Build Status](https://travis-ci.org/slistrom/me-express-back.svg?branch=master)](https://travis-ci.org/slistrom/me-express-back)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/slistrom/me-express-back/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/slistrom/me-express-back/?branch=master)
 
 ## Available Scripts
 
