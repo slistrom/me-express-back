@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('./db/texts.sqlite');
+// const db = new sqlite3.Database('./db/texts.sqlite');
+const db = require("../db/database.js");
 const jwt = require('jsonwebtoken');
 
 let config;
@@ -23,7 +24,11 @@ function checkToken(req, res, next) {
 
     jwt.verify(token, jwtSecret, function(err, decoded) {
         if (err) {
-            // send error response
+            return res.status(401).json({
+                data: {
+                    message: "No valid token."
+                }
+            });
         }
         // Valid token send on the request
         next();

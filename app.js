@@ -7,7 +7,6 @@ const app = express();
 const port = 1337;
 
 const index = require('./routes/index');
-const hello = require('./routes/hello');
 const reports = require('./routes/reports');
 const week = require('./routes/week');
 const register = require('./routes/register');
@@ -37,22 +36,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Imported routes
 app.use('/', index);
-app.use('/hello', hello);
 app.use('/reports/', reports);
 app.use('/reports/week/', week);
 app.use('/register/', register);
 app.use('/login/', login);
-
-// Test route
-app.get("/hello/:msg", (req, res) => {
-    const data = {
-        data: {
-            msg: req.params.msg
-        }
-    };
-
-    res.json(data);
-});
 
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -78,4 +65,12 @@ app.use((err, req, res, next) => {
 });
 
 // Start up server
-app.listen(port, () => console.log(`Example API listening on port ${port}!`));
+// if(!module.parent){
+//     app.listen(process.env.PORT, () =>
+//         console.log(`Example app listening on port ${process.env.PORT}!`),
+//     );
+// }
+
+const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+module.exports = server;
