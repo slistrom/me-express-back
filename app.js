@@ -12,7 +12,6 @@ const week = require('./routes/week');
 const register = require('./routes/register');
 const login = require('./routes/login');
 
-
 app.use(cors());
 
 // This is middleware called for all routes.
